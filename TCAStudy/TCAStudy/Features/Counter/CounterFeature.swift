@@ -5,6 +5,7 @@
 //  Created by 신서연 on 11/23/26.
 //
 
+import SwiftUI
 import ComposableArchitecture
 
 @Reducer // 해당 타입이 TCA의 Reducer로 동작하는 데 필요한 코드를 생성하는 매크로
@@ -34,4 +35,24 @@ struct CounterFeature {
         }
     }
 
+}
+
+struct CounterView: View {
+    let store: StoreOf<CounterFeature>
+
+    var body: some View {
+        VStack {
+            Text("\(store.count)")
+
+            HStack {
+                Button("-") {
+                    store.send(.decrementButtonTapped)
+                }
+
+                Button("+") {
+                    store.send(.incrementButtonTapped)
+                }
+            }
+        }
+    }
 }
