@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FB67782C30B3FC9300F356EA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FB67782B30B3FC9300F356EA /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FB67781030B3F58000F356EA /* TCAStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB67782C30B3FC9300F356EA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = TCAStudy;
 			packageProductDependencies = (
+				FB67782B30B3FC9300F356EA /* ComposableArchitecture */,
 			);
 			productName = TCAStudy;
 			productReference = FB67781030B3F58000F356EA /* TCAStudy.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = FB67780730B3F58000F356EA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FB67782A30B3FC9300F356EA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FB67781130B3F58000F356EA /* Products */;
 			projectDirPath = "";
@@ -328,6 +337,27 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB67782A30B3FC9300F356EA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.26.2;
+			};
+			traits = (
+			);
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB67782B30B3FC9300F356EA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB67782A30B3FC9300F356EA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB67780830B3F58000F356EA /* Project object */;
 }
