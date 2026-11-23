@@ -38,7 +38,7 @@ struct CounterFeature {
 }
 
 struct CounterView: View {
-    let store: StoreOf<CounterFeature>
+    let store: StoreOf<CounterFeature> // CounterFeature의 Store를 전달받는다.
 
     var body: some View {
         VStack {
