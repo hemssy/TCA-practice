@@ -29,6 +29,10 @@ struct CounterFeature {
         case timerTick
     }
     
+    enum CancelID {
+        case timer
+    }
+    
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
@@ -70,8 +74,10 @@ struct CounterFeature {
                             await send(.timerTick)
                         }
                     }
+                    .cancellable(id: CancelID.timer) // Effect에 취소용 식별자를 지정해줌
+
                 } else {
-                    return .none
+                    return .cancel(id: CancelID.timer) // .cancel(id:) 는 해당 식별자의 Effect 취소
                 }
             
             case .timerTick:
